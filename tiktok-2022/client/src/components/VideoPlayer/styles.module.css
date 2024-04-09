@@ -24,3 +24,43 @@
 .hidden {
   opacity: 0;
 }
+
+.actions {
+  position: absolute;
+  bottom: 36px;
+  right: 16px;
+  z-index: 1;
+}
+
+.action {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  text-align: center;
+  background-color: transparent;
+  border: 0;
+}
+
+.album {
+  animation: rotate 3s infinite linear;
+}
+
+.description {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}

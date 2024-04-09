@@ -1,8 +1,10 @@
 import { useRef, useState } from 'react'
 import styles from './styles.module.css'
 import { clsx } from 'clsx'
+import { VideoPlayerActions } from './VideoPlayerActions'
+import { VideoDescription } from './VideoDescription'
 
-export default function VideoPlayer ({ src }) {
+export default function VideoPlayer ({ author, albumImage, description, src }) {
   const [playing, setPlaying] = useState(false)
   const video = useRef(null)
 
@@ -22,6 +24,8 @@ export default function VideoPlayer ({ src }) {
 
       <video autoPlay muted className={styles.video} src={src} loop controls={false} ref={video} onClick={handlePlay} />
       <button className={playerClassName} onClick={handlePlay} />
+      <VideoPlayerActions />
+      <VideoDescription albumImage={albumImage} author={author} description={description} />
     </div>
   )
 }
