@@ -27,8 +27,8 @@
 
 .actions {
   position: absolute;
-  bottom: 36px;
-  right: 16px;
+  bottom: 120px;
+  right: 8px;
   z-index: 1;
 }
 
@@ -42,25 +42,4 @@
   text-align: center;
   background-color: transparent;
   border: 0;
-}
-
-.album {
-  animation: rotate 3s infinite linear;
-}
-
-.description {
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-
 }
